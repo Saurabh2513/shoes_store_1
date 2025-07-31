@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Shoes_store</string>
+    <string name="splash_title">Make \nYour Style \nCome \ntrue Here</string>
+    <string name="search_text">What Are You Looking For?</string>
+    <string name="user_name">apple</string>
+    <string name="welcome_back">Welcome Back</string>
+    <string name="go">GO</string>
+    <string name="recommendation">Recommendation</string>
+    <string name="see_all">See All</string>
+</resources>
