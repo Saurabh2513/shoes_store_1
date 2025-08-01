@@ -2,12 +2,13 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="wrap_content"
-    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:elevation="10dp"
     android:layout_margin="8dp">
 
     <ImageView
-        android:id="@+id/imageView2"
+        android:id="@+id/picrec"
         android:layout_width="164dp"
         android:layout_height="164dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -19,50 +20,56 @@
         android:id="@+id/imageView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/picrec"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/btn_3" />
+        app:srcCompat="@drawable/btn_3"
+        app:tint="@color/khaki" />
 
     <TextView
-        android:id="@+id/textView5"
+        android:id="@+id/priceTxt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="4dp"
         android:text="RS:0"
-        android:textSize="18sp"
-        android:textColor="@color/black"
+        android:textColor="@color/khaki"
+        android:textSize="14sp"
         android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+        app:layout_constraintStart_toStartOf="@+id/picrec"
+        app:layout_constraintTop_toBottomOf="@+id/picrec" />
 
     <TextView
-        android:id="@+id/textView6"
+        android:id="@+id/ratingTxt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="5.5"
+        android:textColor="@color/khaki"
+        android:textSize="16sp"
         android:textStyle="bold"
-        android:textColor="@color/black"
-        android:textSize="15sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/textView5" />
+        app:layout_constraintStart_toEndOf="@+id/priceTxt"
+        app:layout_constraintTop_toTopOf="@+id/priceTxt" />
 
     <ImageView
         android:id="@+id/imageView5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="16dp"
-        app:layout_constraintBottom_toBottomOf="@+id/textView6"
-        app:layout_constraintEnd_toStartOf="@+id/textView6"
-        app:layout_constraintTop_toTopOf="@+id/textView6"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/ratingTxt"
+        app:layout_constraintEnd_toStartOf="@+id/ratingTxt"
+        app:layout_constraintTop_toTopOf="@+id/ratingTxt"
         app:srcCompat="@drawable/star" />
 
     <TextView
-        android:id="@+id/textView7"
-        android:layout_width="wrap_content"
+        android:id="@+id/titleTxt"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="TextView"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView5" />
+        android:lines="2"
+        android:text="Title"
+        android:textColor="@color/khaki"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/picrec"
+        app:layout_constraintStart_toStartOf="@+id/picrec"
+        app:layout_constraintTop_toBottomOf="@+id/priceTxt" />
 </androidx.constraintlayout.widget.ConstraintLayout>

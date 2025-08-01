@@ -4,11 +4,13 @@ import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
+import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import androidx.viewpager2.widget.CompositePageTransformer
 import androidx.viewpager2.widget.MarginPageTransformer
 import com.example.shoes_store.adapter.BrandAdapter
+import com.example.shoes_store.adapter.PopularAdapter
 import com.example.shoes_store.adapter.SliderAdapter
 import com.example.shoes_store.databinding.ActivityMainBinding
 import com.example.shoes_store.model.SliderModel
@@ -19,6 +21,7 @@ class DashBoardActivity : AppCompatActivity() {
     }
     private lateinit var binding: ActivityMainBinding
     private val brandAdapter = BrandAdapter(mutableListOf())
+    private val popularAdapter = PopularAdapter(mutableListOf())
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -31,6 +34,7 @@ class DashBoardActivity : AppCompatActivity() {
     private fun initUI() {
         initBrand()
         intBanner()
+        initRecommended()
     }
 
     private fun initBrand() {
@@ -71,6 +75,18 @@ class DashBoardActivity : AppCompatActivity() {
             binding.progressBarBanner.visibility = View.GONE
         }
         viewModel.loadBanners()
+
+    }
+
+    private fun initRecommended() {
+        binding.recyclerViewRecommended.layoutManager = GridLayoutManager(this,2)
+        binding.recyclerViewRecommended.adapter = popularAdapter
+        binding.progressBarRecommendation.visibility = View.VISIBLE
+        viewModel.popular.observe(this) { data ->
+            popularAdapter.updateData(data)
+            binding.progressBarRecommendation.visibility = View.GONE
+        }
+        viewModel.loadPopular()
 
     }
 }

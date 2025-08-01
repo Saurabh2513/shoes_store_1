@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/gradient_bg"
+    android:background="@drawable/main_bg"
     tools:context=".view.activity.SplashActivity">
 
     <ScrollView
@@ -28,7 +28,7 @@
                 android:layout_marginTop="64dp"
                 android:text="@string/splash_title"
                 android:textAlignment="center"
-                android:textColor="@color/white"
+                android:textColor="@color/khaki"
                 android:textSize="44sp"
                 android:textStyle="bold" />
 

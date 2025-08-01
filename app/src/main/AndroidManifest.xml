@@ -12,8 +12,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Shoes_store">
         <activity
+            android:name=".view.activity.DetailActivity"
+            android:exported="false" />
+        <activity
             android:name=".view.activity.SplashActivity"
-            android:exported="true" >
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -22,9 +25,7 @@
         </activity>
         <activity
             android:name=".view.activity.DashBoardActivity"
-            android:exported="true">
-
-        </activity>
+            android:exported="true"></activity>
     </application>
 
 </manifest>

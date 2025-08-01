@@ -7,4 +7,11 @@
     <string name="go">GO</string>
     <string name="recommendation">Recommendation</string>
     <string name="see_all">See All</string>
+    <string name="total_price">Total Price</string>
+    <string name="buy_now">Buy Now</string>
+    <string name="rs_0">RS:0</string>
+    <string name="select_color">Select color</string>
+    <string name="select_size">Select Size</string>
+    <string name="title">Title</string>
+    <string name="rating_txt">5.0</string>
 </resources>
