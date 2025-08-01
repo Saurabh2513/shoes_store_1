@@ -261,7 +261,7 @@
                 <androidx.appcompat.widget.AppCompatButton
                     style="@android:style/Widget.Button"
                     android:background="@drawable/color_bg"
-                    android:id="@+id/button"
+                    android:id="@+id/addToCartBtn"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="0.5"

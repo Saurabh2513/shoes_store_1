@@ -9,7 +9,7 @@ class ManagmentCart(val context: Context) {
 
     private val tinyDB = TinyDB(context)
 
-    fun insertFood(item: ItemModel) {
+    fun insertItem(item: ItemModel) {
         var listFood = getListCart()
         val existAlready = listFood.any { it.title == item.title }
         val index = listFood.indexOfFirst { it.title == item.title }
