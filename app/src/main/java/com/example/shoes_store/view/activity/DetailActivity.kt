@@ -3,8 +3,10 @@ package com.example.shoes_store.view.activity
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.bumptech.glide.Glide
 import com.example.shoes_store.Helper.ManagmentCart
+import com.example.shoes_store.adapter.PicsAdapter
 import com.example.shoes_store.databinding.ActivityDetailBinding
 import com.example.shoes_store.model.ItemModel
 
@@ -22,6 +24,21 @@ class DetailActivity : AppCompatActivity() {
         managmentCart = ManagmentCart(this)
         item = intent.getSerializableExtra("object")!! as ItemModel
         setupViews()
+        setUpPicList()
+    }
+
+    private fun setUpPicList() {
+        val picList = item.picUrl.toList()
+        binding.picList.apply {
+            adapter = PicsAdapter(picList as MutableList<String>){
+                imageUrl -> Glide.with(this@DetailActivity)
+                .load(imageUrl)
+                .into(binding.picMain)
+            }
+            layoutManager =
+                LinearLayoutManager(this@DetailActivity, LinearLayoutManager.HORIZONTAL, false)
+
+        }
     }
 
     private fun setupViews() = with(binding) {
