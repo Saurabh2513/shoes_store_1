@@ -57,7 +57,7 @@ class BrandAdapter(private val items: MutableList<BrandModel>) :
                 holder.binding.pic,
                ColorStateList.valueOf(
                    holder.itemView.context.getColor(
-                       if (idSelect) R.color.indigo else R.color.violet
+                       if (idSelect) R.color.white else R.color.violet
                    )
                )
             )

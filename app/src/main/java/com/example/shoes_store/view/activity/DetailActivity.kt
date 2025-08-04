@@ -6,7 +6,9 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.bumptech.glide.Glide
 import com.example.shoes_store.Helper.ManagmentCart
+import com.example.shoes_store.adapter.ColorAdapter
 import com.example.shoes_store.adapter.PicsAdapter
+import com.example.shoes_store.adapter.SizeAdapter
 import com.example.shoes_store.databinding.ActivityDetailBinding
 import com.example.shoes_store.model.ItemModel
 
@@ -25,15 +27,34 @@ class DetailActivity : AppCompatActivity() {
         item = intent.getSerializableExtra("object")!! as ItemModel
         setupViews()
         setUpPicList()
+        setUpColorList()
+        setUpSizeList()
+    }
+
+    private fun setUpSizeList() {
+        val sizeList = item.size.map { it }
+        binding.sizeList.apply {
+            adapter = SizeAdapter(sizeList as MutableList<String>)
+            layoutManager =
+                LinearLayoutManager(this@DetailActivity, LinearLayoutManager.HORIZONTAL, false)
+        }
+    }
+
+    private fun setUpColorList() {
+
+        binding.colorList.adapter = ColorAdapter(item.color)
+        binding.colorList.layoutManager =
+            LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
+
     }
 
     private fun setUpPicList() {
         val picList = item.picUrl.toList()
         binding.picList.apply {
-            adapter = PicsAdapter(picList as MutableList<String>){
-                imageUrl -> Glide.with(this@DetailActivity)
-                .load(imageUrl)
-                .into(binding.picMain)
+            adapter = PicsAdapter(picList as MutableList<String>) { imageUrl ->
+                Glide.with(this@DetailActivity)
+                    .load(imageUrl)
+                    .into(binding.picMain)
             }
             layoutManager =
                 LinearLayoutManager(this@DetailActivity, LinearLayoutManager.HORIZONTAL, false)
@@ -57,18 +78,18 @@ class DetailActivity : AppCompatActivity() {
         backBtn.setOnClickListener {
             finish()
         }
-       plusBtn.setOnClickListener {
-           item.numberInCrate++
-           numberItemTxt.text = item.numberInCrate.toString()
-           updateTotalPrice()
-       }
-       minusBtn.setOnClickListener {
-           if (item.numberInCrate > 1) {
-               item.numberInCrate--
-               numberItemTxt.text = item.numberInCrate.toString()
-               updateTotalPrice()
-           }
-       }
+        plusBtn.setOnClickListener {
+            item.numberInCrate++
+            numberItemTxt.text = item.numberInCrate.toString()
+            updateTotalPrice()
+        }
+        minusBtn.setOnClickListener {
+            if (item.numberInCrate > 1) {
+                item.numberInCrate--
+                numberItemTxt.text = item.numberInCrate.toString()
+                updateTotalPrice()
+            }
+        }
         addToCartBtn.setOnClickListener {
             managmentCart.insertItem(item)
         }
