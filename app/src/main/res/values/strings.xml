@@ -16,4 +16,10 @@
     <string name="rating_txt">5.0</string>
     <string name="order_detail">Order Detail</string>
     <string name="your_cart_is_empty">Your Cart is Empty</string>
+    <string name="check_out">Check Out</string>
+    <string name="subtotal">SubTotal</string>
+    <string name="free_delivery">Free Delivery</string>
+    <string name="total_tax">Total Tax</string>
+    <string name="rs">RS-</string>
+    <string name="total">Total</string>
 </resources>

@@ -175,7 +175,7 @@
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <TextView
-                android:id="@+id/textView12"
+                android:id="@+id/taxTxt"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
@@ -197,7 +197,7 @@
 
 
             <TextView
-                android:id="@+id/textView13"
+                android:id="@+id/totalTxt"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
