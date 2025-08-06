@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Shoes_store">
         <activity
+            android:name=".view.activity.CartActivity"
+            android:exported="false" />
+        <activity
             android:name=".view.activity.DetailActivity"
             android:exported="false" />
         <activity
@@ -25,7 +28,7 @@
         </activity>
         <activity
             android:name=".view.activity.DashBoardActivity"
-            android:exported="true"></activity>
+            android:exported="true" />
     </application>
 
 </manifest>

@@ -1,5 +1,6 @@
-package com.example.shoes_store.adapter
+package com.example.shoes_store.view.adapter
 
+import android.R
 import android.content.Context
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -19,14 +20,14 @@ class PicsAdapter(val items: MutableList<String>, private val onImageSelected: (
     override fun onCreateViewHolder(
         parent: ViewGroup,
         viewType: Int
-    ): PicsAdapter.ViewHolder {
+    ): ViewHolder {
         context = parent.context
         val binding =
             ViewholderPicsBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         return ViewHolder(binding)
     }
 
-    override fun onBindViewHolder(holder: PicsAdapter.ViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val item = items[position]
         Glide.with(context)
             .load(items[position])
@@ -39,10 +40,10 @@ class PicsAdapter(val items: MutableList<String>, private val onImageSelected: (
             onImageSelected(items[position])
         }
         if (selectedPosition == position) {
-            holder.binding.colorLayout.setBackgroundColor(context.getColor(android.R.color.holo_green_light))
+            holder.binding.colorLayout.setBackgroundColor(context.getColor(R.color.holo_green_light))
         }
         else {
-            holder.binding.colorLayout.setBackgroundColor(context.getColor(android.R.color.white))
+            holder.binding.colorLayout.setBackgroundColor(context.getColor(R.color.white))
         }
 
     }

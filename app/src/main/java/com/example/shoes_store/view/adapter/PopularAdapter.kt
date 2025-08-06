@@ -1,4 +1,4 @@
-package com.example.shoes_store.adapter
+package com.example.shoes_store.view.adapter
 
 import android.content.Intent
 import android.view.LayoutInflater
@@ -22,13 +22,13 @@ class PopularAdapter(private val items: MutableList<ItemModel>) :
     inner class ViewHolder(val binding: ViewholderRecommendedBinding) :
         RecyclerView.ViewHolder(binding.root)
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PopularAdapter.ViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val binding =
             ViewholderRecommendedBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         return ViewHolder(binding)
     }
 
-    override fun onBindViewHolder(holder: PopularAdapter.ViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val item = items[position]
         holder.binding.apply {
             titleTxt.text = item.title

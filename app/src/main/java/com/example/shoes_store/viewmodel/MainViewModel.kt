@@ -13,7 +13,6 @@ class MainViewModel :ViewModel() {
     val brands : LiveData<MutableList<BrandModel>> = repository.brands
     val banners : LiveData<List<SliderModel>> = repository.banners
     val popular : LiveData<MutableList<ItemModel>> = repository.popular
-
     fun loadBrands( ) = repository.loadBrands()
     fun loadBanners() = repository.loadBanners()
     fun loadPopular() = repository.loadPopular()

@@ -1,4 +1,4 @@
-package com.example.shoes_store.adapter
+package com.example.shoes_store.view.adapter
 
 
 

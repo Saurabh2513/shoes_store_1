@@ -1,4 +1,4 @@
-package com.example.shoes_store.adapter
+package com.example.shoes_store.view.adapter
 
 import android.content.res.ColorStateList
 import android.view.LayoutInflater
@@ -28,13 +28,13 @@ class BrandAdapter(private val items: MutableList<BrandModel>) :
     ) : RecyclerView.ViewHolder(binding.root)
 
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): BrandAdapter.ViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val binding =
             ViewholderBrandBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         return ViewHolder(binding)
     }
 
-    override fun onBindViewHolder(holder: BrandAdapter.ViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val item = items[position]
 
         Glide.with(holder.itemView.context)
@@ -64,7 +64,5 @@ class BrandAdapter(private val items: MutableList<BrandModel>) :
         }
 
     }
-
-
     override fun getItemCount() = items.size
 }

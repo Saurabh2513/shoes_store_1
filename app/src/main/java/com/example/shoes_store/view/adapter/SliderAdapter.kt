@@ -1,4 +1,4 @@
-package com.example.shoes_store.adapter
+package com.example.shoes_store.view.adapter
 
 import android.content.Context
 import android.view.LayoutInflater
@@ -31,7 +31,7 @@ class SliderAdapter(
 
     override fun onCreateViewHolder(
         parent: ViewGroup, viewType: Int
-    ): SliderAdapter.SliderViewHolder {
+    ): SliderViewHolder {
         val view = LayoutInflater.from(parent.context)
             .inflate(R.layout.slider_item_viewholder, parent, false)
 

@@ -6,9 +6,9 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.bumptech.glide.Glide
 import com.example.shoes_store.Helper.ManagmentCart
-import com.example.shoes_store.adapter.ColorAdapter
-import com.example.shoes_store.adapter.PicsAdapter
-import com.example.shoes_store.adapter.SizeAdapter
+import com.example.shoes_store.view.adapter.ColorAdapter
+import com.example.shoes_store.view.adapter.PicsAdapter
+import com.example.shoes_store.view.adapter.SizeAdapter
 import com.example.shoes_store.databinding.ActivityDetailBinding
 import com.example.shoes_store.model.ItemModel
 

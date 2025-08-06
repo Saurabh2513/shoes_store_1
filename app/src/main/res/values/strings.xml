@@ -14,4 +14,6 @@
     <string name="select_size">Select Size</string>
     <string name="title">Title</string>
     <string name="rating_txt">5.0</string>
+    <string name="order_detail">Order Detail</string>
+    <string name="your_cart_is_empty">Your Cart is Empty</string>
 </resources>

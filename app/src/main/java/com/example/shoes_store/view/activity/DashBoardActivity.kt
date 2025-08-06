@@ -9,9 +9,9 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import androidx.viewpager2.widget.CompositePageTransformer
 import androidx.viewpager2.widget.MarginPageTransformer
-import com.example.shoes_store.adapter.BrandAdapter
-import com.example.shoes_store.adapter.PopularAdapter
-import com.example.shoes_store.adapter.SliderAdapter
+import com.example.shoes_store.view.adapter.BrandAdapter
+import com.example.shoes_store.view.adapter.PopularAdapter
+import com.example.shoes_store.view.adapter.SliderAdapter
 import com.example.shoes_store.databinding.ActivityMainBinding
 import com.example.shoes_store.model.SliderModel
 import com.example.shoes_store.viewmodel.MainViewModel
