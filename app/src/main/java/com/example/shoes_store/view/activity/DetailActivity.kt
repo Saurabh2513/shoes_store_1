@@ -99,6 +99,6 @@ class DetailActivity : AppCompatActivity() {
     }
 
     private fun updateTotalPrice() = with(binding) {
-        totalPriceTxt.text = "RS:${item.price * item.numberInCrate}"
+        totalEachItem.text = "RS:${item.price * item.numberInCrate}"
     }
 }

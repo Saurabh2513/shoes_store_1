@@ -22,4 +22,6 @@
     <string name="total_tax">Total Tax</string>
     <string name="rs">RS-</string>
     <string name="total">Total</string>
+    <string name="plus">+</string>
+    <string name="minus">-</string>">
 </resources>
