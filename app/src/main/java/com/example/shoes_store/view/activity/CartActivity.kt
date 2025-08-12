@@ -14,9 +14,7 @@ import com.example.shoes_store.view.adapter.CartAdapter
 class CartActivity : AppCompatActivity() {
     private lateinit var binding: ActivityCartBinding
     private lateinit var managmentCart: ManagmentCart
-    private lateinit var adapter: CartAdapter
     private val cartList = ArrayList<ItemModel>()
-    private var tax: Double = 0.0
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -34,8 +32,7 @@ class CartActivity : AppCompatActivity() {
             finish()
         }
     }
-    private fun initCart() {
-        cartList.clear()
-
-    }
+//    private fun initCart() {
+//        cartList.clear()
+//    }
 }
