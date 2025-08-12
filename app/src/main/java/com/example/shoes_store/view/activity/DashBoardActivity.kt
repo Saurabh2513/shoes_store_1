@@ -1,5 +1,6 @@
 package com.example.shoes_store.view.activity
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
@@ -35,6 +36,13 @@ class DashBoardActivity : AppCompatActivity() {
         initBrand()
         intBanner()
         initRecommended()
+        initBottomNavigation()
+    }
+
+    private fun initBottomNavigation() {
+       binding.cartBtn.setOnClickListener {
+           startActivity(Intent(this, CartActivity::class.java))
+       }
     }
 
     private fun initBrand() {

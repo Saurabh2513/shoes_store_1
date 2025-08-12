@@ -2,12 +2,10 @@ package com.example.shoes_store.view.adapter
 
 import android.content.Context
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.resource.bitmap.CenterCrop
-import com.bumptech.glide.request.Request
 import com.bumptech.glide.request.RequestOptions
 import com.example.shoes_store.Helper.ChangeNumberItemsListener
 import com.example.shoes_store.Helper.ManagmentCart
@@ -17,7 +15,7 @@ import com.example.shoes_store.model.ItemModel
 
 class CartAdapter(
     private val listItemSelected: ArrayList<ItemModel>, context: Context,
-    var changeNumberItemsListener: ChangeNumberItemsListener? = null
+    var changeNumberItemsListener: ChangeNumberItemsListener
 ) :
     RecyclerView.Adapter<CartAdapter.ViewHolder>() {
 
